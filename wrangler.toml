@@ -1,0 +1,11 @@
+name = "boardscan"
+compatibility_date = "2024-11-01"
+pages_build_output_dir = "./dist"
+
+# Bind the KV namespace used for daily rate limiting.
+# Create it once in the Cloudflare dashboard (Storage > KV > Create) or via:
+#   npx wrangler kv namespace create RATE_LIMITS
+# Paste the returned id below, then commit this file.
+[[kv_namespaces]]
+binding = "RATE_LIMITS"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"

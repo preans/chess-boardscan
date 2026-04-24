@@ -1,0 +1,23 @@
+# Copy to .dev.vars for local development with `npm start` (wrangler pages dev).
+# In production, set these in the Cloudflare dashboard:
+#   Pages > your-project > Settings > Environment variables
+# Never commit .dev.vars — it holds your secret API key.
+
+# REQUIRED — your OpenRouter API key. Get one at https://openrouter.ai/keys
+OPENROUTER_API_KEY = "sk-or-v1-..."
+
+# OPTIONAL — which model to use. Defaults to google/gemini-2.5-pro.
+# Must be a vision-capable model on OpenRouter.
+# Cheaper/faster: google/gemini-2.5-flash, openai/gpt-4o-mini
+OPENROUTER_MODEL = "google/gemini-2.5-pro"
+
+# REQUIRED in production — comma-separated list of origins allowed to call the function.
+# Leave empty to accept any origin (not recommended for public sites).
+# Example: ALLOWED_ORIGINS = "https://scoresheet.example.com,https://www.example.com"
+ALLOWED_ORIGINS = ""
+
+# OPTIONAL — per-IP daily rate limit. Default: 20.
+RATE_LIMIT_IP_PER_DAY = "20"
+
+# OPTIONAL — total daily rate limit across all users. Default: 500.
+RATE_LIMIT_TOTAL_PER_DAY = "500"
