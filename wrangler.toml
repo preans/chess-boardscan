@@ -8,4 +8,4 @@ pages_build_output_dir = "./dist"
 # Paste the returned id below, then commit this file.
 [[kv_namespaces]]
 binding = "RATE_LIMITS"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "7f5247067d5f4e04be946daa1bc273c5"
